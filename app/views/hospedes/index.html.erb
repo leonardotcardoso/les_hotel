@@ -1,0 +1,33 @@
+  <% provide(:title, '| hospedes') %>
+  <table class="table table-condensed table-hover table-bordered">
+    <thead>
+      <tr>
+        <th>CPF</th>
+        <th>Nome</th>
+        <th>Endereco</th>
+        <th>Bairro</th>
+        <th>Cidade</th>
+        <th>Estado</th>
+        <th></th>
+        <th></th>
+      </tr>
+    </thead>
+  
+    <tbody>
+      <% @hospedes.each do |hospede| %>
+        <tr>
+          <td><%= hospede.cpf %></td>
+          <td><%= hospede.nome.split.each { |name| name.capitalize! }.join(" ") %></td>
+	      <td><%= hospede.endereco %></td>
+          <td><%= hospede.bairro.split.each { |name| name.capitalize! }.join(" ") %></td>
+          <td><%= hospede.cidade.split.each { |name| name.capitalize! }.join(" ") %></td>
+          <td><%= hospede.estado %></td>
+          <td><%= link_to image_tag('glyphicons_150_edit.png'), edit_hospede_path(hospede) %></td>
+          <td><%= link_to image_tag('glyphicons_207_remove_2.png'), hospede, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+  <%= link_to 'Cadastrar Hospede', new_hospede_path , :class => 'btn btn-primary' %>
+  <br><br>
+</div>

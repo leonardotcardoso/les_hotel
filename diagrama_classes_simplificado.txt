@@ -1,0 +1,5 @@
+Reservas { @id, @data_entrada, @data_saida, @id_quarto, @id_hospede @desconto } { :reservas_periodo(data_inicial,data_final) }
+Hospedagem { id, @data_entrada, @data_saida, @id_quarto, @id_hospede #@id_reserva? } { :quartos_ocupados( Time.now ) }
+Quartos { @id, @numero , @preco, @descricao }
+Hospedes { @id, @cpf, @nome, @endereço, @telefone }
+Pagamento { @id , @id_reserva, @data_pgto } 

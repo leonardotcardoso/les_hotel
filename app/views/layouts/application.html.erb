@@ -7,8 +7,23 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-
-<%= yield %>
-
+  <div class="container">
+    <h3>les_hotel <span class="append"><%= yield(:title) %></span></h3>
+    <div class="navbar navbar-inverse">
+      <div class="navbar-inner">
+        <div class="container">
+          <ul class="nav">
+            <li><a href="#">Home</a></li>
+            <li class="active"><a href="#">Cadastrar Hospede</a></li>
+			<li><a href="#">Cadastrar Quarto</a></li>
+			<li><a href="#">Incluir Reserva</a></li>
+			<li><a href="#">Consolidar Hospedagem</a></li>
+			<li><a href="#">Registrar Pagamento</a></li>
+          </ul>
+        </div>
+      </div>
+    </div><!-- /.navbar -->  
+    <%= yield %>
+  </div>
 </body>
 </html>

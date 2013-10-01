@@ -1,0 +1,44 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Cpf:</strong>
+  <%= @hospede.cpf %>
+</p>
+
+<p>
+  <strong>Nome:</strong>
+  <%= @hospede.nome %>
+</p>
+
+<p>
+  <strong>Logradouro:</strong>
+  <%= @hospede.logradouro %>
+</p>
+
+<p>
+  <strong>Numero:</strong>
+  <%= @hospede.numero %>
+</p>
+
+<p>
+  <strong>Complemento:</strong>
+  <%= @hospede.complemento %>
+</p>
+
+<p>
+  <strong>Bairro:</strong>
+  <%= @hospede.bairro %>
+</p>
+
+<p>
+  <strong>Cidade:</strong>
+  <%= @hospede.cidade %>
+</p>
+
+<p>
+  <strong>Estado:</strong>
+  <%= @hospede.estado %>
+</p>
+
+<%= link_to 'Edit', edit_hospede_path(@hospede) %> |
+<%= link_to 'Back', hospedes_path %>

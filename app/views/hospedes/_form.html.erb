@@ -1,0 +1,35 @@
+<%= form_for(@hospede) do |f| %>
+  <% if @hospede.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@hospede.errors.count, "error") %> prohibited this hospede from being saved:</h2>
+      <ul>
+      <% @hospede.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+  <span class="field">
+    <%= f.label :cpf %>
+	<%= f.text_field :cpf %>
+    <%= f.label :nome %>
+    <%= f.text_field :nome %>
+  </span>
+  <span class="field">
+    <%= f.label :logradouro %>
+    <%= f.text_field :logradouro %>
+    <%= f.label :numero %>
+    <%= f.text_field :numero %>
+    <%= f.label :complemento %>
+    <%= f.text_field :complemento %>
+    <%= f.label :bairro %>
+    <%= f.text_field :bairro %>
+    <%= f.label :cidade %>
+    <%= f.text_field :cidade %>
+    <%= f.label :estado %>
+    <%= f.text_field :estado %>
+  </span>
+  <div class="actions">
+    <input type="submit" class="btn btn-info">
+  </div>
+<% end %>

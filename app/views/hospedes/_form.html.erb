@@ -9,27 +9,45 @@
       </ul>
     </div>
   <% end %>
-  <span class="field">
-    <%= f.label :cpf %>
-	<%= f.text_field :cpf %>
-    <%= f.label :nome %>
-    <%= f.text_field :nome %>
-  </span>
-  <span class="field">
-    <%= f.label :logradouro %>
-    <%= f.text_field :logradouro %>
-    <%= f.label :numero %>
-    <%= f.text_field :numero %>
-    <%= f.label :complemento %>
-    <%= f.text_field :complemento %>
-    <%= f.label :bairro %>
-    <%= f.text_field :bairro %>
-    <%= f.label :cidade %>
-    <%= f.text_field :cidade %>
-    <%= f.label :estado %>
-    <%= f.text_field :estado %>
-  </span>
-  <div class="actions">
-    <input type="submit" class="btn btn-info">
+  <div class="well span11">
+    <div class="span3">
+      <label for="hospede_cpf">CPF: </label>
+      <input id="hospede_cpf" name="hospede[cpf]" type="text" class="input-block-level" />
+    </div>
+    <div class="span7">
+      <label for="hospede_nome">Nome: </label>
+      <input id="hospede_nome" name="hospede[nome]" type="text" class="input-block-level" />
+    </div>
+    <div class="span8">
+      <label for="hospede_logradouro">Logradouro: </label>
+      <input id="hospede_logradouro" name="hospede[logradouro]" type="text" class="input-block-level" />
+    </div>
+    <div class="span2">
+      <label for="hospede_numero">Numero: </label>
+      <input id="hospede_numero" name="hospede[numero]" type="text" class="input-block-level" />
+    </div>
+    <div class="span2">
+      <label for="hospede_complemento">Complemento: </label>
+      <input id="hospede_complemento" name="hospede[complemento]" type="text" class="input-block-level" />
+    </div>
+    <div class="span3">
+      <label for="hospede_bairro">Bairro: </label>
+      <input id="hospede_bairro" name="hospede[bairro]" type="text" class="input-block-level" />
+    </div>
+    <div class="span3">
+      <label for="hospede_cidade">Cidade: </label>
+      <input id="hospede_cidade" name="hospede[cidade]" type="text" class="input-block-level" />
+    </div>
+    <div class="span2">
+      <label for="hospede_estado">Estado: </label>
+      <input id="hospede_estado" name="hospede[estado]" type="text" class="input-block-level" />
+    </div>
+  </div>
+  <div class="span11">
+    <div class="span10">
+      <div class="actions pull-right">
+        <input type="submit" class="btn btn-info">
+      </div>
+	</div>
   </div>
 <% end %>
